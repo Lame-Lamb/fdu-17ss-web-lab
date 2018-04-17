@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <title>Upload</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h1>Share Your Travels</h1>
+                    <p><strong><em>Let us know where you've been</em></strong></p>
+                </div>
+
+                <div class="col-md-8">
+                    <ul class="nav nav-justified">
+                        <li class="nav-item col-lg-3"><a class="nav-link disabled mt-lg-4" href="Lab05.html">Gallery</a></li>
+                        <li class="nav-item col-lg-3"><a class="nav-link disabled mt-lg-4" href="#">Feeling Lucky</a></li>
+                        <li class="nav-item col-lg-3"><a class="nav-link disabled mt-lg-4" href="#">User</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">
+                        Photo Details
+                    </h3>
+                    <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" id="title" placeholder="Give your photo a descriptive name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea class="form-control" id="description" rows="2" placeholder="Adding a rich description will help with search results"></textarea>
+                        </div>
+
+                        <label>Continent</label>
+                        <select class="custom-select">
+                            <option selected>Choose Continent</option>
+                            <option value="1">Africa</option>
+                            <option value="2">Antarctica</option>
+                            <option value="3">Asia</option>
+                            <option value="4">Europe</option>
+                            <option value="5">Oceania</option>
+                            <option value="6">North America</option>
+                            <option value="7">South America</option>
+                        </select>
+
+                        <label>Country</label>
+                        <select class="custom-select">
+                            <option selected>Choose Country</option>
+                            <option value="1">China</option>
+                            <option value="2">Japan</option>
+                            <option value="3">Korea</option>
+
+                        </select>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+
+                        <label>Copyright?</label>
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">All rights reserved</label>
+                        </div>
+
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" checked>
+                            <label class="custom-control-label" for="customRadio2">Creative Commons</label>
+                        </div>
+
+
+                        <label>Creative Commons Types</label>
+                        <div class="form-group">
+                            <div class="form-check-inline">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Attribution</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2">Noncommercial</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3">No Derivative Works</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                            <label class="custom-control-label" for="customCheck">I accept the software license</label>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-3 col-12">
+                                <div class="form-group">
+                                    <label for="rate">Rate this photo:</label>
+                                    <input type="number" class="form-control" id="rate" min="0" max="9">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1">
+                            </div>
+
+                            <div class="col-lg-8 col-12">
+                                <div class="form-group">
+                                    <label for="color">Color Collection:</label>
+                                    <input type="text" class="form-control" id="color">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <div class="form-group">
+                                    <label for="date">Date Taken:</label>
+                                    <input type="text" class="form-control" id="date">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1">
+                            </div>
+
+                            <div class="col-lg-5 col-12">
+                                <div class="form-group">
+                                    <label for="time">Time Taken:</label>
+                                    <input type="text" class="form-control" id="time">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                        <button type="reset" class="btn btn-secondary">Clear</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+</html>
