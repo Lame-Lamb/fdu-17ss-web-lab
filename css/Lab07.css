@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+}
+
+select {
+    width: 300px;
+}
+
+button {
+    width: 300px;
+}
+
+#warning{
+    color: red;
+}
+
+table {
+    border: 0;
+    margin: auto;
+}
+
+table th{
+    background-color: gray;
+    color: whitesmoke;
+}
+
+table tr.special{
+    background-color: lightgrey;
+}
+
+table tr.normal{
+    background: white;
+}
+
+table td{
+    padding: 0 0.5em;
+}
