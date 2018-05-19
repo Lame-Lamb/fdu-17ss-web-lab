@@ -10,6 +10,21 @@ function generateLink($url, $label, $class) {
 
 function outputPostRow($number)  {
     include("travel-data.inc.php");
+    echo "<div class=\"row\">
+                <div class=\"col-md-4\">".
+                    generateLink("post.php?id={${'postId'.$number}}","<img src='images/{${'thumb'.$number}}' alt='{${'title'.$number}}' class='img-respective'/>","").
+                "</div>
+                <div class=\"col-md-8\">
+                    <h2>{${'title'.$number}}</h2>
+                    <div class=\"details\">
+                        <p>Post by ".generateLink("post.php?id={${'postId'.$number}}","{${'userName'.$number}}","")."<span class='pull-right'>"."{${'date'.$number}}"."</span>"."</p>".
+                        "<p class=\"ratings\">".constructRating("{${'reviewsRating'.$number}}")." {${'reviewsNum'.$number}}REVIEWS"."</p>".
+                        "</div>".
+                        "<p class=\"excerpt\">"."{${'excerpt'.$number}}"."</p>".
+                        generateLink("post.php?id={${'postId'.$number}}","Read more","btn btn-primary btn-sm").
+                "</div>
+        </div>
+        <hr/>";
 }
 
 /*
