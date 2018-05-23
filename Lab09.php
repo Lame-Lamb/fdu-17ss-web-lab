@@ -1,6 +1,6 @@
 <?php
 include 'travel-data.inc.php';
-
+include 'functions.inc.php';
 
 
 
@@ -13,7 +13,7 @@ include 'travel-data.inc.php';
     <meta charset="utf-8">
     <title>Chapter 12</title>
 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
@@ -41,9 +41,11 @@ include 'travel-data.inc.php';
               /* you will need to fill this place with appropriate PHP */
               /* hint: use array and loop */
               //the next line is an example
-              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a> 
-
-
+              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a>
+              sort($countries);
+              foreach ($countries as $value){
+                  echo generateLink("list.php?country=$value","$value","btn btn-default");
+              }
               ?>
                      
         </div>               
@@ -70,7 +72,20 @@ include 'travel-data.inc.php';
    //              		</div>
    //              	</div>
    //              </a>
-			// </li>
+            // </li>
+          foreach ($images as $value) {
+              echo "<li>".
+                    generateLink("detail.php?id=$value[id]",
+                        "<img src=\"images/square/$value[path]\" alt=\"$value[title]\">
+                 	     <div class=\"caption\">
+                		    <div class=\"blur\">
+                		    </div>
+                		    <div class=\"caption-text\">
+                 			    <h1>$value[title]</h1>
+                 		    </div>
+                 	     </div>","img-responsive").
+                    "</li>";
+          }
           ?>
 
        </ul>       
